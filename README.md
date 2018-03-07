@@ -1,11 +1,11 @@
 ## JWT Authorize
 
-Simple JWT authentication wrapper
+Simple JWT authentication wrapper for .NET MVC Core
 
 ## Installation
 
 ```
-dotnet add BC.JwtAuthorize
+dotnet add package BC.JwtAuthorize
 ```
 
 ## Usage
@@ -33,7 +33,7 @@ public class JwtRequestHandler : IJwtTokenRequestHandler {
 }
 ```
 
-Register to service collections
+Register `JwtRequestHandler` to service collections
 
 ```csharp
 public void ConfigureServices(IServiceCollection services) {
@@ -43,7 +43,7 @@ public void ConfigureServices(IServiceCollection services) {
 }
 ```
 
-Append `[Authorize]` in REST API
+Append `[Authorize]` attribute to REST method
 
 ```csharp
 [Route("api/[controller]/[action]")]
