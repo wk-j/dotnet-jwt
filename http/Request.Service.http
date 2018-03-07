@@ -1,0 +1,21 @@
+
+###
+POST http://localhost:5000/api/authen/requestToken
+Content-Type: application/json
+
+{ 
+    "user": "wk",
+    "password": "wk"
+}
+
+###
+
+GET http://localhost:5000/api/hello/hi
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoid2siLCJleHAiOjE1MjA0NDMxNzIsImlzcyI6ImJjaXJjbGUuY28udGgiLCJhdWQiOiJiY2lyY2xlLmNvLnRoIn0.sLWZJU_8ru0g0qSBz9BL6YMxCUL-aHQSnMRZFwRtHP8
+
+###
+
+GET http://localhost:5000/api/hello/who
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoid2siLCJleHAiOjE1MjA0NDMxNzIsImlzcyI6ImJjaXJjbGUuY28udGgiLCJhdWQiOiJiY2lyY2xlLmNvLnRoIn0.sLWZJU_8ru0g0qSBz9BL6YMxCUL-aHQSnMRZFwRtHP8
