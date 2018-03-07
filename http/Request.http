@@ -12,4 +12,10 @@ Content-Type: application/json
 
 GET http://localhost:5000/api/hello/hi
 Accept: application/json
-Authorization: Bearer ssss
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoid2siLCJleHAiOjE1MjA0MjkwMDMsImlzcyI6ImJjaXJjbGUuY28udGgiLCJhdWQiOiJiY2lyY2xlLmNvLnRoIn0.1snqyuK6A59rxbp2LK1M-odMpqqk0D5QLqW-f6D7b7o
+
+###
+
+GET http://localhost:5000/api/hello/who
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoid2siLCJleHAiOjE1MjA0MjkwMDMsImlzcyI6ImJjaXJjbGUuY28udGgiLCJhdWQiOiJiY2lyY2xlLmNvLnRoIn0.1snqyuK6A59rxbp2LK1M-odMpqqk0D5QLqW-f6D7b7o

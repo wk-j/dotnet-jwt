@@ -8,10 +8,18 @@ namespace DotNetJwt {
 
         [HttpGet]
         [Authorize]
-        [Produces("applicaton/json")]
         public dynamic Hi() {
             return new {
                 Message = "Hello, world!"
+            };
+        }
+
+        [HttpGet]
+        [Authorize]
+        public dynamic Who() {
+            var name = this.User.Identity.Name;
+            return new {
+                Name = name
             };
         }
     }
