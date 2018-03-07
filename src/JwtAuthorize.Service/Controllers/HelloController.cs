@@ -6,8 +6,7 @@ namespace JwtAuthorize.Service.Controllers {
     [Route("api/[controller]/[action]")]
     public class HelloController : ControllerBase {
 
-        [HttpGet]
-        [Authorize]
+        [HttpGet, Authorize]
         public dynamic Hi() {
             return new {
                 Message = "Hello, world!"

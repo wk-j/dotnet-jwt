@@ -43,6 +43,20 @@ public void ConfigureServices(IServiceCollection services) {
 }
 ```
 
+Append `[Authorize]` in REST API
+
+```csharp
+[Route("api/[controller]/[action]")]
+public class HelloController : ControllerBase {
+    [HttpGet, Authorize]
+    public dynamic Hi() {
+        return new {
+            Message = "Hello, world!"
+        };
+    }
+}
+```
+
 ## Test with REST client
 
 Get JWT token
