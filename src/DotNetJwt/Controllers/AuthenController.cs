@@ -16,7 +16,7 @@ namespace DotNetJwt {
         private string SecurityKey = "112233445566778899";
 
         [HttpPost]
-        public IActionResult RequestToken([FromBody] TokenRequest request) {
+        public ObjectResult RequestToken([FromBody] TokenRequest request) {
             if (request.User == "wk") {
 
                 var claims = new[] {
@@ -38,7 +38,7 @@ namespace DotNetJwt {
                     }
                 );
             }
-            return BadRequest("Could not verify username and password");
+            return UnprocessableEntity("Unauthroized");
         }
     }
 }
