@@ -5,7 +5,7 @@ Simple JWT authentication wrapper for .NET MVC Core
 ## Installation
 
 ```
-dotnet add package BC.JwtAuthorize
+dotnet add package wk.JwtAuthorize
 ```
 
 ## Usage
@@ -64,7 +64,7 @@ Get JWT token
 ```
 POST http://localhost:5000/api/authen/requestToken
 Content-Type: application/json
-{ 
+{
     "user": "wk",
     "password": "wk"
 }
