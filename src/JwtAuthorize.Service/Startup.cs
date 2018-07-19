@@ -14,15 +14,36 @@ using JwtAuthorize;
 using JwtAuthorize.Controllers;
 
 namespace JwtAuthorize.Service {
+
     public class JwtRequestHandler : IJwtTokenRequestHandler {
+
+        private Context context;
+
         public string SecretKey { set; get; } = "abcdefghijklmnopqrstuvwzyz";
         public int Expire { set; get; } = 30;
+
+        public JwtRequestHandler(Context context) {
+            this.context = context;
+        }
+
         public HandleResult HandleRequest(JwtTokenRequest request) {
-            if (request.User == "wk" && request.Password == "wk") {
+            var user = context.Users.Where(x => x.UserName == request.User && x.Password == request.Password).FirstOrDefault();
+            if (user != null) {
                 return new HandleResult { Success = true };
             }
             return new HandleResult { Success = false, Message = "Invalid user / password" };
         }
+    }
+
+    public class User {
+        public string UserName { set; get; }
+        public string Password { set; get; }
+    }
+
+    public class Context {
+        public List<User> Users { set; get; } = new List<User> {
+            new User { UserName = "wk", Password = "wk" }
+        };
     }
 
     public class Startup {
@@ -33,10 +54,10 @@ namespace JwtAuthorize.Service {
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services) {
-            var handler = new JwtRequestHandler();
+            var context = new Context();
+            var handler = new JwtRequestHandler(context);
             services.AddSingleton<IJwtTokenRequestHandler>(handler);
             services.AddJwtAuthentication(handler.SecretKey);
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
