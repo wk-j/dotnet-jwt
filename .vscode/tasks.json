@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/DotNetJwt/DotNetJwt.csproj"
+                "${workspaceFolder}/tests/HelloWeb/HelloWeb.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

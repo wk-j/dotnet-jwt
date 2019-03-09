@@ -3,9 +3,9 @@
 POST http://localhost:5000/api/authen/requestToken
 Content-Type: application/json
 
-{ 
-    "user": "wk",
-    "password": "1234"
+{
+    "user": "admin",
+    "password": "admin"
 }
 
 ###

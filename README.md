@@ -1,10 +1,15 @@
 ## JWT Authorize
 
+[![NuGet](https://img.shields.io/nuget/v/wk.JwtAuthorize.svg)](https://www.nuget.org/packages/wk.JwtAuthorize)
+
 Simple JWT authentication wrapper for .NET MVC Core
+
+- [x] 2.1
+- [ ] 3.0
 
 ## Installation
 
-```
+```bash
 dotnet add package wk.JwtAuthorize
 ```
 

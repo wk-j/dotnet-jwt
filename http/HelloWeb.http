@@ -1,0 +1,13 @@
+POST http://localhost:5000/api/authen/requestToken
+Content-Type: application/json
+
+{
+    "user": "admin",
+    "password": "admin"
+}
+
+### Hello
+POST http://localhost:5000/api/values
+Accept: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiYWRtaW4iLCJleHAiOjE1NTIxNTU4NTQsImlzcyI6ImJjaXJjbGUuY28udGgiLCJhdWQiOiJiY2lyY2xlLmNvLnRoIn0.iasRdgaDhlhUwXssOE9oTamcs1TWv3eZMYOANmTgoiM
+
