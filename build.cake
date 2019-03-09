@@ -16,6 +16,7 @@ Task("Pack").Does(() => {
     var settings = new DotNetCoreMSBuildSettings();
     settings.Properties["Version"] = new string[] { version };
 
+    CreateDirectory(publishDir);
     CleanDirectory(publishDir);
     DotNetCorePack($"src/{name}", new DotNetCorePackSettings {
         OutputDirectory = publishDir,

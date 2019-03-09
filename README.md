@@ -1,5 +1,6 @@
 ## JWT Authorize
 
+[![Build Status](https://dev.azure.com/wk-j/jwt-authorize/_apis/build/status/wk-j.jwt-authorize?branchName=master)](https://dev.azure.com/wk-j/jwt-authorize/_build/latest?definitionId=27&branchName=master)
 [![NuGet](https://img.shields.io/nuget/v/wk.JwtAuthorize.svg)](https://www.nuget.org/packages/wk.JwtAuthorize)
 
 Simple JWT authentication wrapper for .NET MVC Core
