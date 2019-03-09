@@ -12,6 +12,9 @@ variables:
 
 steps:
 
+- script: mkdir .publish
+  displayName: "Create Publish Dir"
+
 - script: dotnet tool install -g Cake.Tool
   displayName: "Install Cake"
 
